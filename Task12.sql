@@ -1,4 +1,4 @@
-Merhabalar,
+/*Merhabalar,
 
 Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden gerçekleştiriniz.
 
@@ -12,14 +12,14 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 
 
 
-Kolay Gelsin.
+Kolay Gelsin.*/
 
-CEVAPLAR:
-1.SELECT COUNT(film) FROM film WHERE length > (SELECT AVG(length) FROM film);
-2.SELECT COUNT (film) FROM film WHERE rental_rate = (SELECT MAX (rental_rate) FROM film);
-3.SELECT title FROM film
+--CEVAPLAR:
+SELECT COUNT(film) FROM film WHERE length > (SELECT AVG(length) FROM film);
+SELECT COUNT (film) FROM film WHERE rental_rate = (SELECT MAX (rental_rate) FROM film);
+SELECT title FROM film
 WHERE (rental_rate  = (SELECT MIN(rental_rate) FROM film)) AND (replacement_cost = (SELECT MIN(replacement_cost) FROM film));
-4.SELECT customer.first_name, customer.last_name FROM customer
+SELECT customer.first_name, customer.last_name FROM customer
 JOIN payment On customer.customer_id = ANY
 (SELECT customer_id FROM payment
 GROUP BY customer_id 

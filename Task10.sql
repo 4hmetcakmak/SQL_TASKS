@@ -13,7 +13,7 @@ Aşağıdaki sorgu senaryolarını dvdrental örnek veri tabanı üzerinden ger�
 
 Kolay Gelsin.*/
 
-CEVAPLAR:
-1.SELECT country.country,city.city FROM country LEFT JOIN city ON country.country_id = city.country_id;
-2.SELECT payment.payment_id, customer.first_name,customer.last_name FROM payment RIGHT JOIN customer ON payment.customer_id=customer.customer_id;
-3.SELECT rental.rental_id, customer.first_name, customer.last_name FROM rental FULL JOIN customer ON rental.customer_id=customer.customer_id;
+--CEVAPLAR:
+SELECT country.country,city.city FROM country LEFT JOIN city ON country.country_id = city.country_id;
+SELECT payment.payment_id, customer.first_name,customer.last_name FROM payment RIGHT JOIN customer ON payment.customer_id=customer.customer_id;
+SELECT rental.rental_id, customer.first_name, customer.last_name FROM rental FULL JOIN customer ON rental.customer_id=customer.customer_id;
